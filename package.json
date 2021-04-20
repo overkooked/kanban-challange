@@ -1,0 +1,25 @@
+{
+  "name": "kanban",
+  "version": "1.0.0",
+  "description": "javascript kanban practice project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server",
+    "server": "parcel serve index.html"
+  },
+  "keywords": [
+    "javascript",
+    "html",
+    "css"
+  ],
+  "author": "Anup K Saw",
+  "license": "ISC",
+  "dependencies": {
+    "@parcel/packager-html": "^2.0.0-alpha.3",
+    "lite-server": "^2.6.1"
+  },
+  "devDependencies": {
+    "parcel": "^2.0.0-nightly.642"
+  }
+}

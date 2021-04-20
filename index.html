@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/c3f962cb71.js"
+            crossorigin="anonymous"></script>
+
+    <link rel="stylesheet"
+          href="./style.css" />
+    <script src="./app.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header class='kb-header'>
+
+        <div class='kb-header-brand'>
+            <h1>MY KANBAN BOARD</h1>
+        </div>
+        <div class='kb-spacer'></div>
+        <div class='kb-header-nav'>
+            <input type=text
+                   placeholder="Search"
+                   class='kb-input' />
+        </div>
+
+    </header>
+
+    <div class='kb-root'>
+
+        <div class='kb-action-section'>
+            <button id='kbAddCardBtnLink'
+                    type='button'
+                    onclick='addCard()'
+                    class='kb-btn-link'>
+                <i class="fas fa-plus"></i>
+                <span>Add Card</span></button>
+        </div>
+
+        <div id='kbCards' class='kb-card-sections'></div>
+
+        Main content will come here
+    </div>
+
+    <footer class='kb-footer'>
+        <span class=''>@Copyright Bandana Kumari Saw 2021</span>
+    </footer>
+
+    <script src="./app/footer/footer.js"></script>
+</body>
+
+</html>
