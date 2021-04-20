@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "lite-server",
+    "start1": "lite-server --prot 4200",
+    "start": "lite-server --config bs-config.js",
     "server": "parcel serve index.html"
   },
   "keywords": [
