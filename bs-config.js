@@ -1,6 +1,7 @@
-{
-    "port": 8000,
 
+
+module.exports = {
+    "port": process.env.PORT || 4200,
     "server": {
         "baseDir": "./"
     },
