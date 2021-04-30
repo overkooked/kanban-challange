@@ -29,6 +29,10 @@ body {
     justify-content: right;
 }
 
+.kb-header .kb-header-nav >*{
+    margin-left: 15px;
+}
+
 
 .kb-footer {
     display: flex;
@@ -44,6 +48,11 @@ body {
 }
 
 .kb-input {
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.kb-select {
     padding: 8px;
     border-radius: 5px;
 }

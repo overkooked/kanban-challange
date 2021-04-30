@@ -7,18 +7,18 @@
           content="IE=edge">
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon"
+          href="data/favicon.ico">
     <script src="https://kit.fontawesome.com/c3f962cb71.js"
             crossorigin="anonymous"></script>
 
     <link rel="stylesheet"
           href="./style.css" />
-    <script src="./app.js"></script>
     <title>Document</title>
 </head>
 
 <body>
     <header class='kb-header'>
-
         <div class='kb-header-brand'>
             <h1>MY KANBAN BOARD</h1>
         </div>
@@ -27,6 +27,10 @@
             <input type=text
                    placeholder="Search"
                    class='kb-input' />
+
+            <select id='kbVersionList'
+                    class='kb-select'>
+            </select>
         </div>
 
     </header>
@@ -36,22 +40,21 @@
         <div class='kb-action-section'>
             <button id='kbAddCardBtnLink'
                     type='button'
-                    onclick='addCard()'
                     class='kb-btn-link'>
                 <i class="fas fa-plus"></i>
                 <span>Add Card</span></button>
         </div>
 
-        <div id='kbCards' class='kb-card-sections'></div>
-
-        Main content will come here
+        <div id='kbCards'
+             class='kb-card-sections'>
+        </div>
     </div>
 
     <footer class='kb-footer'>
-        <span class=''>@Copyright Bandana Kumari Saw 2021</span>
+        <span class=''>@Copyright 2021, Version {{version}}</span>
     </footer>
 
-    <script src="./app/footer/footer.js"></script>
+    <script src="./app.js"></script>
 </body>
 
 </html>

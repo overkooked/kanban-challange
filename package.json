@@ -1,26 +1,30 @@
 {
-  "name": "kanban",
-  "version": "1.0.0",
-  "description": "javascript kanban practice project",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start1": "lite-server --prot 4200",
-    "start": "lite-server --config bs-config.js",
-    "server": "parcel serve index.html"
-  },
-  "keywords": [
-    "javascript",
-    "html",
-    "css"
-  ],
-  "author": "Anup K Saw",
-  "license": "ISC",
-  "dependencies": {
-    "@parcel/packager-html": "^2.0.0-alpha.3",
-    "lite-server": "^2.6.1"
-  },
-  "devDependencies": {
-    "parcel": "^2.0.0-nightly.642"
-  }
+    "name": "kanban",
+    "version": "1.0.0",
+    "description": "javascript kanban practice project",
+    "main": "build/v1/index.html",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start1": "lite-server --prot 4200",
+        "start": "lite-server --config bs-config.js",
+        "server": "parcel serve index.html",
+        "build": "node tool && parcel build index.html --public-url . && node update"
+    },
+    "keywords": [
+        "javascript",
+        "html",
+        "css"
+    ],
+    "author": "Anup K Saw",
+    "license": "ISC",
+    "dependencies": {
+        "@parcel/packager-html": "^2.0.0-alpha.3",
+        "lite-server": "^2.6.1"
+    },
+    "devDependencies": {
+        "express": "^4.17.1",
+        "fs-extra": "^9.1.0",
+        "parcel": "^2.0.0-nightly.642",
+        "posthtml-include": "^1.7.0"
+    }
 }
