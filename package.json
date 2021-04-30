@@ -2,13 +2,14 @@
     "name": "kanban",
     "version": "1.0.0",
     "description": "javascript kanban practice project",
-    "main": "build/v1/index.html",
+    "main": "build/v2/index.html",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server",
         "start1": "lite-server --prot 4200",
-        "start": "lite-server --config bs-config.js",
+        "start-lite": "lite-server --config bs-config.js",
         "server": "parcel serve index.html",
-        "build": "node tool && parcel build index.html --public-url . && node update"
+        "build-prod": "node tool/pkg-update && parcel build app/index.html --public-url . && node tool/version-update"
     },
     "keywords": [
         "javascript",

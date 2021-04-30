@@ -12,6 +12,10 @@ app.use(express.static('build'));
 //     res.sendFile(req.url, { root: './build' });
 // })
 
+app.get('/', function (req, res) {
+    res.redirect(req.url + 'v1');
+})
+
 
 app.get('/:dir', function (req, res) {
     console.log(req.url);
