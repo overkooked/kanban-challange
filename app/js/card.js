@@ -5,16 +5,24 @@
 
     let counter = 1;
     function addCard(text) {
-        console.log('add card button is clicked');
-        const cardsSection = document.getElementById('kbCards');
-        const span = document.createElement('div');
-        span.innerHTML = counter + ` : ${text} <button id="kbDeleteCard' + counter + '" class="kb-btn-link"> <i class="far fa-trash-alt"></i> delete</button>`;
-        span.querySelector('button').addEventListener('click', function () {
+
+        const cardHtml = `
+        <div class='kb-card-header'>
+        ${text}
+
+        <button id="kbDeleteCard${counter}" class="kb-btn-link"> <i class="fas fa-ellipsis-v"></i></button>
+        </div>
+        <div class='kb-card-body'></div>
+        `
+
+        const kbCardContainer = document.getElementById('kbCardContainer');
+        const card = kb.getHtml(cardHtml, 'kb-card');
+        card.querySelector('button').addEventListener('click', function () {
             console.log(this);
-            span.remove();
+            card.remove();
         })
         counter++;
-        cardsSection.append(span);
+        kbCardContainer.append(card);
     }
 
     function deleteCard(x) {
