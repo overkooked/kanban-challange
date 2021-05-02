@@ -1,3 +1,5 @@
+@import './css/card-section.css';
+
 body {
     background: lightgray;
     padding: 0;
@@ -17,6 +19,7 @@ body {
     padding: 10px;
     box-sizing: border-box;
     align-items: center;
+    height: 80px;
 }
 
 .kb-header .kb-header-brand {
@@ -26,10 +29,13 @@ body {
 
 
 @media screen and (max-width: 750px) {
-    .kb-header{
+    .kb-header {
         flex-direction: column;
         width: 100%;
+        height: unset;
+
     }
+
     .kb-header .kb-header-brand h1 {
         font-size: 1.5rem;
     }
