@@ -29,7 +29,7 @@ body {
     justify-content: right;
 }
 
-.kb-header .kb-header-nav >*{
+.kb-header .kb-header-nav>* {
     margin-left: 15px;
 }
 
@@ -82,6 +82,10 @@ body {
     background-color: #e0e0e0;
 }
 
+.kb-btn:disabled {
+    background-color: #e0e0e0;
+}
+
 .kb-btn-link {
     padding: 6px 12px;
     display: inline-block;
@@ -94,4 +98,49 @@ body {
 
 .kb-btn-link:hover {
     color: blue;
+}
+
+.kb-btn-link:disabled {
+    color: gray;
+}
+
+.kb-add-confirm-section {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.kb-add-section {
+    width: 50%;
+    max-width: 400px;
+}
+
+.kb-add-card-name {
+    width: 100%;
+}
+
+.kb-flex,
+.kb-flex-row {
+    width: 100%;
+    display: flex;
+}
+
+.kb-flex-column {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.kb-add-btn-section {
+    margin: 5px 0;
+}
+
+.kb-btn-blue {
+    background-color: #0052cc;
+    color: white;
+}
+
+.kb-btn-blue:hover {
+    background-color: #0047B3;
+    border-color: #0047B3;
 }
