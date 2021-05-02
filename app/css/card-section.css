@@ -16,6 +16,7 @@
     border-color: #80808040;
     box-sizing: border-box;
     margin: 5px;
+    box-shadow: 4px 4px 4px 0px grey;
 
 }
 
@@ -28,9 +29,18 @@
     background: #2d3943;
     color: white;
     font-size: 20px;
+    border-radius: 5px;
 }
 
 .kb-card-header .fas {
     color: white;
     font-size: 20px;
+}
+
+.kb-card-add-task-action{
+    display: flex;
+    min-height: 50px;
+    justify-content: flex-end;
+    align-items: center;
+
 }

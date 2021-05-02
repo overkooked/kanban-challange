@@ -2,31 +2,61 @@
 (function () {
 
     const addBtn = document.getElementById('kbAddCardBtnLink');
+    let count = 1;
 
-    let counter = 1;
+    function toggleCardActions(card, id) {
+        let hasActionSectionOpen = false;
+        function cardActions() {
+            const actionsDiv = card.querySelector(`#kbCardActionBtns${id}`);
+            if (hasActionSectionOpen) {
+                removeAllChildNodes(actionsDiv);
+                hasActionSectionOpen = false;
+                return;
+            }
+
+            const actionHtml = `
+            <button id="kbAddTaskBtn${id}" class="kb-btn-link"> <i class="fas fa-plus"></i> Add Task</button>
+            <button id="kbDeleteCardBtn${id}" class="kb-btn-link"> <i class="fas fa-trash-alt"></i> Delete Card</button>    
+            `
+            actionsDiv.innerHTML = actionHtml;
+            actionsDiv.querySelector(`#kbAddTaskBtn${id}`).addEventListener('click', () => {
+                console.log(`kbAddTaskBtn${id} I am clicked`);
+            });
+
+            actionsDiv.querySelector(`#kbDeleteCardBtn${id}`).addEventListener('click', () => {
+                console.log(`kbDeleteCardBtn${id} I am clicked`);
+                card.remove();
+            });
+
+            hasActionSectionOpen = true;
+
+        }
+        card.querySelector(`button#kbCardActions${id}`).addEventListener('click', cardActions);
+    }
+
+
     function addCard(text) {
 
+        let counter = count;
         const cardHtml = `
         <div class='kb-card-header'>
         ${text}
 
-        <button id="kbDeleteCard${counter}" class="kb-btn-link"> <i class="fas fa-ellipsis-v"></i></button>
+        <button id="kbCardActions${counter}" class="kb-btn-link"> <i class="fas fa-ellipsis-h"></i></button>
         </div>
+        <div class='kb-card-add-task-action' id='kbCardActionBtns${counter}'>
+        
+          </div>
         <div class='kb-card-body'></div>
         `
 
         const kbCardContainer = document.getElementById('kbCardContainer');
         const card = kb.getHtml(cardHtml, 'kb-card');
-        card.querySelector('button').addEventListener('click', function () {
-            console.log(this);
-            card.remove();
-        })
-        counter++;
-        kbCardContainer.append(card);
-    }
 
-    function deleteCard(x) {
-        console.log(x);
+        toggleCardActions(card, counter);
+
+        count++;
+        kbCardContainer.append(card);
     }
 
     function showCardAddSection() {
@@ -46,7 +76,6 @@
         const cardsSection = document.getElementById('kbAddConfirmSection');
 
         const div = kb.getHtml(html, "kb-add-section");
-        console.log(div);
 
         const confirmAddCard = function confirmAddCard() {
             const textarea = div.querySelector('#kbAddCardText');
@@ -66,6 +95,12 @@
 
         cardsSection.appendChild(div);
         addBtn.disabled = true;
+    }
+
+    function removeAllChildNodes(parent) {
+        while (parent.firstChild) {
+            parent.removeChild(parent.firstChild);
+        }
     }
 
     addBtn.addEventListener('click', showCardAddSection);
