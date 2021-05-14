@@ -15,6 +15,7 @@
             }
 
             const actionHtml = `
+            <button id="kbEditTaskBtn${id}" class="kb-btn-link"> <i class="fas fa-edit"></i> Edit Card</button>
             <button id="kbAddTaskBtn${id}" class="kb-btn-link"> <i class="fas fa-plus"></i> Add Task</button>
             <button id="kbDeleteCardBtn${id}" class="kb-btn-link"> <i class="fas fa-trash-alt"></i> Delete Card</button>    
             `
