@@ -42,5 +42,9 @@
     min-height: 50px;
     justify-content: flex-end;
     align-items: center;
+}
 
+.kb-add-task-section{
+    padding: 15px;
+    box-sizing: border-box;
 }

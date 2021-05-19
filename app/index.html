@@ -48,11 +48,79 @@
 
         <div class='kb-add-confirm-section'
              id='kbAddConfirmSection'>
+            <div class='kb-add-section'>
+                <div class='kb-flex'>
+                    <textarea id='kbAddCardText'
+                              class='kb-add-card-name kb-flex kb-input'></textarea>
+                </div>
+
+                <div class='kb-flex kb-add-btn-section'>
+                    <button class='kb-btn kb-btn-blue'
+                            style='width: 100%'
+                            id='kbConfirmAddCard'>Add</button>
+                    <span class='kb-spacer'
+                          style='width: 20px'></span>
+                    <button class='kb-btn'
+                            style='width: 100%'
+                            id='kbCancelAddCard'>Cancel</button>
+                </div>
+            </div>
         </div>
 
         <div id='kbCardContainer'
              class='kb-card-container'>
+
+            <div class='kb-card'>
+                <div class='kb-card-header'>
+                    Card Header
+                    <button id="kbCardActions${counter}"
+                            class="kb-btn-link"> <i class="fas fa-ellipsis-h"></i></button>
+                </div>
+                <div class='kb-card-add-task-action kb-flex-column'
+                     id='kbCardActionBtns${counter}'>
+                    <div class='kb-flex kb-card-add-task-action'>
+                        <button id="kbEditTaskBtn${id}"
+                                class="kb-btn-link"> <i class="fas fa-edit"></i> Edit Card</button>
+                        <button id="kbAddTaskBtn${id}"
+                                class="kb-btn-link"> <i class="fas fa-plus"></i> Add Task</button>
+                        <button id="kbDeleteCardBtn${id}"
+                                class="kb-btn-link"> <i class="fas fa-trash-alt"></i> Delete Card</button>
+                    </div>
+                    <div class='kb-flex-column kb-add-task-section'
+                         id='kbAddCardSection'>
+
+                        <textarea id='kbTaskText'
+                                  class='kb-add-task-name kb-input'></textarea>
+                        <input type='date'
+                               id='kbTaskDate'
+                               class='kb-add-task-date kb-input' />
+                        <select id='kbTaskPriority'
+                                class='kb-add-task-priority kb-input'>
+                            <option value='1'>1</option>
+                            <option value='2'>2</option>
+                            <option value='3'>3</option>
+                            <option value='4'>4</option>
+                            <option value='5'>5</option>
+                        </select>
+
+                        <div class='kb-flex kb-add-btn-section'>
+                            <button class='kb-btn kb-btn-blue'
+                                    style='width: 100%'
+                                    id='kbConfirmAddCard'>Add</button>
+                            <span class='kb-spacer'
+                                  style='width: 20px'></span>
+                            <button class='kb-btn'
+                                    style='width: 100%'
+                                    id='kbCancelAddCard'>Cancel</button>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class='kb-card-body'></div>
         </div>
+    </div>
 
     </div>
 
