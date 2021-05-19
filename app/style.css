@@ -164,3 +164,22 @@ body {
     background-color: #0047B3;
     border-color: #0047B3;
 }
+
+.kb-task-card {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 30px);
+    padding: 15px;
+    box-sizing: border-box;
+    border: 1px solid #2d3943;
+    margin: 15px;
+    border-radius: 5px;
+    background: white;
+}
+.kb-task-card >*{
+    padding: 5px;
+}
+
+.kb-task-card:hover {
+    background-color: lightgray;
+}
